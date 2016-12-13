@@ -5,14 +5,13 @@
 class CarthageCache < Formula
   desc "A simple formula for caching carthage libraries"
   homepage "https://soheilbm.github.io/carthage-cache/"
-  url "https://github.com/soheilbm/carthage-cache/archive/v0.1.1.tar.gz"
-  version "0.1.1"
-  sha256 "dccca55054b0772431d779a361108c01ac0907a3921859862931b7cdd7e05784"
+  url "https://github.com/soheilbm/carthage-cache.git", :tag => "v0.1.2"
+  head "https://github.com/soheilbm/carthage-cache.git", :branch => "master"
 
-  depends_on :xcode => ["8.0", :build]
+  depends_on "cmake" => :builds
 
   def install
-   system "make", "install", "copy", "clean", "TEMPORARY_FOLDER=#{buildpath}/CarthageCache.dst"
+   system "make", "install", "copy", "clean" 
   end
 
 end
