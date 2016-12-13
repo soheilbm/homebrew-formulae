@@ -5,7 +5,7 @@
 class CarthageCache < Formula
   desc "A simple formula for caching carthage libraries"
   homepage "https://soheilbm.github.io/carthage-cache/"
-  url "https://github.com/soheilbm/carthage-cache.git", :tag => "v0.1.2"
+  url "https://github.com/soheilbm/carthage-cache.git", :tag => "v0.1.4"
   head "https://github.com/soheilbm/carthage-cache.git", :branch => "master"
 
   depends_on "cmake" => :builds
