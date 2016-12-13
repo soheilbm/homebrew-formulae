@@ -9,13 +9,10 @@ class CarthageCache < Formula
   version "0.1.1"
   sha256 "dccca55054b0772431d779a361108c01ac0907a3921859862931b7cdd7e05784"
 
-  depends_on "cmake" => :builds
+  depends_on :xcode => ["8.0", :build]
 
   def install
-   system "cmake", ".", *std_cmake_args
-   system "make", "install"
-   system "make", "copy"
-   system "make", "clean"
+   system "make", "install", "copy", "clean", "TEMPORARY_FOLDER=#{buildpath}/CarthageCache.dst"
   end
 
 end
