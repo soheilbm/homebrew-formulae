@@ -8,7 +8,7 @@ class CarthageCache < Formula
   url "https://github.com/soheilbm/carthage-cache.git", :tag => "v0.1.4"
   head "https://github.com/soheilbm/carthage-cache.git", :branch => "master"
 
-  depends_on "cmake" => :builds
+  depends_on :xcode => ["7.0", :build]
 
   def install
    system "make", "install", "copy", "clean" 
