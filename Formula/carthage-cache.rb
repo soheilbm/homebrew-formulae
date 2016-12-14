@@ -12,7 +12,7 @@ class CarthageCache < Formula
   depends_on :xcode => ["8.0", :build]
 
   def install
-   system "make", "delete", "install", "copy", "clean" 
+   system "make", "install", "copy", "clean" 
   end
 
 end
